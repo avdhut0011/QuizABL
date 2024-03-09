@@ -1,0 +1,166 @@
+{% load crispy_forms_tags %}
+
+{% include "quizABL1/header.html" %}
+<br>
+<br>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+    <style>
+        #id_password1_helptext{
+            display: none;
+        }
+        #id_username_helptext{
+            display: none;
+        }
+        .form-select{
+            padding: 0;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color:white;
+            border-radius: 8px;
+            box-shadow: black;
+        }
+    </style>
+</head>
+<div class="container" style="width: 1100px;">
+    <section>
+        <h2>User Registration</h2>
+        <form action="" method="post" class="row g-3">
+            {% csrf_token %}
+            <div class="col-md-6">
+                {{ form.username|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.first_name|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.last_name|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.email|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.dept|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.city|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.date_of_birth|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.date_of_joining|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.password1|as_crispy_field }}
+            </div>
+            <div class="col-md-6">
+                {{ form.password2|as_crispy_field }}
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </div>
+        </form>
+        <p>Already have an account? <a href="{% url 'login' %}" class="btn btn-danger">Login here</a></p>
+    </section>
+</div>
+
+<br>
+<br>
+{% include "quizABL1/footer.html" %}
+
+
+
+<!-- 
+        <div class="row">
+            <div class="col-md-4">
+        <div class="form-group">
+            <label for="id_username">Username:</label>
+            {{ form.username }}
+        </div>
+    </div>
+        
+        <div class="col-md-4">
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            {{form.first_name}}
+        </div>
+    </div>
+
+        <div class="col-md-4">
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            {{form.last_name}}
+        </div>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-md-4">
+            <div class="form-group">
+                <label for="email">Email</label>
+                {{form.email}}
+            </div>
+        </div>
+
+            <div class="col-md-4">
+            <div class="form-group">
+                <label for="dept">Department</label>
+                {{form.dept}}
+            </div>
+        </div>
+
+            <div class="col-md-4">
+            <div class="form-group">
+                <label for="city">City</label>
+                {{form.city}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+        <div class="form-group">
+            <label for="date_of_birth">Date Of Birth</label>
+            {{form.date_of_birth}}
+        </div>
+    </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="date_of_joining">Date of Joining</label>
+                {{form.date_of_joining}}
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+              
+    </div>
+
+    <div class="row"> 
+
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="password1">Password</label>
+                {{form.password1}}
+        </div>
+    </div>
+
+<div class="col-md-4">
+        <div class="form-group">
+            <label for="password2">Confirm Password</label>
+                {{form.password2}}
+        </div>
+    </div>
+    </div>
+
+     -->

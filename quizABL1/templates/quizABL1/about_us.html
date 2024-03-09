@@ -1,0 +1,74 @@
+{% load static %}
+{% include "quizABL1/header.html" %}
+<br>
+<br>
+<br>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+    <style>
+        /* Flexbox layout */
+        .container {
+            display: flex;
+            justify-content: space-between; /* Align sections horizontally */
+            width: 100%; /* Adjust as needed */
+        }
+        
+        /* Style for each section */
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adjust shadow */
+            flex: 1; /* Equal width for both sections */
+        }
+        
+        /* Style for the image */
+        section img {
+            width: 100%; /* Make image responsive */
+            border-radius: 8px; /* Rounded corners */
+            animation: zoomInOut 4s infinite alternate; /* Apply zoom in and out animation */
+        }
+        
+        /* Apply zoom in and out effect */
+        @keyframes zoomInOut {
+            0%, 100% {
+                transform: scale(1); /* Start and end at original size */
+            }
+            50% {
+                transform: scale(1.2); /* Zoom in at 50% of the animation */
+            }
+        }
+    </style>
+</head>
+<div class="container">
+    <section>
+        <br>
+        <h4>ASHOKA BUILDCON LIMITED</h4>
+        <br>
+        <h1>FOCUSED & CONSISTENT.</h1>
+        <br>
+        <br>
+        <p>Ashoka Buildcon Limited is a Fortune India 500 company and one of the leading highway developers in India. The company is an integrated EPC, BOT and HAM player.</p>
+        <p>From a humble beginning in 1976, we have risen to our present stature through our commitment to uphold Quality, Safety, Consistency and Environment Consciousness in all our assignments.</p>
+        <p>Our strength is reflected in our ability to think and perform beyond the ‘ordinary’ so as to challenge the perceived boundaries in construction industry.</p>
+        <p>The result is our unmatched portfolio of extraordinary achievements that have helped us build new-age infrastructure in India and overseas.</p>
+        <p>We are strengthened with a strong talent pool of technical and support staff and our strong fundamentals grant us the capability to execute projects of any scale.</p>
+        <p>Ashoka Buildcon Limited is listed on National Stock Exchange and Bombay Stock Exchange.</p>
+    </section>
+    <section>
+        <img src="{% static 'img/head.jpg' %}" alt="Description of your image">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h6>ASHOKA BUILDCON LIMITED</h6>
+    </section>
+
+    
+
+
+</div>
+<br>
+<br>
+{% include "quizABL1/footer.html" %}

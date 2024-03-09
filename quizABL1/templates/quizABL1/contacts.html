@@ -1,0 +1,107 @@
+{% include "quizABL1/header.html" %}
+<br>
+<br>
+<br>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+    <style>
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .location-box {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+            height: 100%;
+        }
+        
+        .location-box:hover {
+            background-color: rgba(228, 143, 62, 0.048);
+            transform: scale(1.05); /* Zoom effect */
+        }
+        
+        .location-box h6 {
+            margin-bottom: 10px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .location-box p {
+            margin-bottom: 0;
+            color: #555;
+        }
+
+        .location-box:hover {
+            background-color: rgba(192, 192, 192, 0.5); /* Light grey with transparency */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Contact Us</h1>
+    <h6 style="text-align: center;">Find Here The Answers You Are Looking For</h6>
+    <br>
+    
+    <h4 style="text-align: center;">REGISTERED OFFICE</h4>
+    <p style="text-align: center;">S.No - 861, Ashoka House, Ashoka Marg, Ashoka Nagar, Nashik. 422011 Phone No. 0253-6633705</p>
+    
+    <div class="container">
+        <section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8891011.760554813!2d75.44189177198498!3d17.477826569183502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeae0f109fadb%3A0x3eac77042513cc4c!2sAshoka%20Buildcon%20Limited!5e0!3m2!1sen!2sin!4v1707759828340!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="location-box">
+                    <h6>MUMBAI</h6>
+                    <p>The Capital Building, Opp ICICI Bank, A/807, 8th Floor, BKC- Bandra (E) Mumbai. 400051 <br>Tel : 022 67399700</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="location-box">
+                    <h6>MUMBAI</h6>
+                    <p>B-1301 Godrej Colesiem, Opposite Eastern Express Highway, Behind Everad Nagar, Sion East Mumbai. 400 022 <br>Tel : 022 68470700</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="location-box">
+                    <h6>NAGPUR</h6>
+                    <p>Asha Tower, 3rd Floor, Ramkirshna, Ashram Road, Plot No. 147, Dhantoli, Nagpur. 440 012 Tel: 0712 2440172</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="location-box">
+                    <h6>DELHI AND NCR</h6>
+                    <p> Flat No 402 City Center Mall Sector 12 Dwarka, New Delhi. 110075 <br>Tel: 011 28088060</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="location-box">
+                    <h6>PUNE</h6>
+                    <p>S No. 93, Sai Hira Appartments 2nd Floor, Ghorpadi - Mundhwa Road, Mundhwa, Pune. 411036 <br>Tel: 020 24270744, 24266600</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="location-box">
+                    <h6>BANGALORE</h6>
+                    <p>2574, 1st Floor, Satya Heritage, 8th Cross, 13th Main,( Opp. Park), E-Block, Sahakara Nagar, Bangalore. 560092, Karnataka <br>Tel: 080 23533599</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<br>
+<br>
+    {% include "quizABL1/footer.html" %}
+
+

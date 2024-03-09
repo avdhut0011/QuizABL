@@ -1,0 +1,43 @@
+{% load crispy_forms_tags %}
+
+{% include "quizABL1/header.html" %}
+<head>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+    <style>
+        section {
+            margin: 20px;
+            padding: 20px;
+            
+            background-color:white;
+            border-radius: 8px;
+            box-shadow: black;
+        }
+    </style>
+</head>
+<div class="container" style="width:500px;">
+<body>
+    <br>
+    <br>
+    <section>
+    <h2>Question Form</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+        <br>
+        
+        {{form|crispy}}
+
+
+        <button type="submit" class="btn btn-danger">Submit</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+    </form>
+</section>
+</body>
+</div>
+</html>
+
+{% include "quizABL1/footer.html" %}

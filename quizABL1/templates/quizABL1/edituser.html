@@ -1,0 +1,99 @@
+{% load crispy_forms_tags %}
+
+{% include "quizABL1/header.html" %}
+<head>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+    <style>
+        section {
+            margin: 20px;
+            padding: 20px;
+            
+            background-color:white;
+            border-radius: 8px;
+            box-shadow: black;
+        }
+        #id_password1_helptext{
+            display: none;
+        }
+        #id_username_helptext{
+            display: none;
+        }
+        .form-select{
+            padding: 0;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            
+            background-color:white;
+            border-radius: 8px;
+            box-shadow: black;
+        }
+    </style>
+</head>
+<div class="container" style="width:1100px;">
+<body>
+    <br>
+    <br>
+    <section>
+        <h2>User Registration</h2>
+        <form action="" method="post" class="row g-3">
+            {% csrf_token %}
+            <div class="col-md-6">
+                {{ form.username|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.first_name|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.last_name|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.email|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.dept|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.city|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.date_of_birth|as_crispy_field }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form.date_of_joining|as_crispy_field }}
+            </div>
+
+            <!-- <div class="col-md-6">
+                {{ form.password1|as_crispy_field }}
+            </div>
+            <div class="col-md-6">
+                {{ form.password2|as_crispy_field }}
+            </div> -->
+            <div class="col-12">
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </div>
+        </form>
+        <p>Already have an account? <a href="{% url 'login' %}" class="btn btn-danger">Login here</a></p>
+    </section>
+              
+    </div>
+    
+        
+        
+    </form>
+    <br>
+    <br>
+</section>
+</body>
+</div>
+</html>
+
+{% include "quizABL1/footer.html" %}

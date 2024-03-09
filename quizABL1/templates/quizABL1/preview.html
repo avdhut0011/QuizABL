@@ -1,0 +1,32 @@
+{% load crispy_forms_tags %}
+{% include "quizABL1/header.html" %}
+<head>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+    <style>
+        section {
+            margin: 20px;
+            padding: 20px;
+            
+            background-color:white;
+            border-radius: 8px;
+            box-shadow: black;
+        }
+    </style>
+    <title>Quiz Preview</title>
+</head>
+<div class="container" style="width:500px;">
+<section>
+    <body>
+        <h1>Quiz Preview</h1>
+        <ul>
+            {% for question, selected_option in questions %}
+                <li>
+                    <strong>{{ question.question_text }}</strong><br>
+                    <em>Selected Option:</em> {{ selected_option }}
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</section>
+</div>
+{% include "quizABL1/footer.html" %}

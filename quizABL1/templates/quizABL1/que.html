@@ -1,0 +1,60 @@
+{% load crispy_forms_tags %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head> -->
+
+{% include "quizABL1/header.html" %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+    <style>
+        section {
+            margin: 20px;
+            padding: 20px;
+            
+            background-color:white;
+            border-radius: 8px;
+            box-shadow: black;
+        }
+    </style>
+</head>
+<div class="container" style="width:500px;">
+<body>
+    <br>
+    <br>
+    <section>
+    <h2>Add Question</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+        <br>
+        
+        {{form|crispy}}
+
+  
+        <!--  -->
+        <!-- <label for="id_name">Name:</label>
+        {{ form.name }}
+        {{ form.name.errors }}
+        
+        <br>
+        
+        
+        <label for="id_email">Email:</label>
+        {{ form.email }}
+        {{ form.email.errors }}
+        
+        <br> -->
+
+        <button type="submit" class="btn btn-danger">Submit</button>
+        <a href="{% url 'questionlist' %}" class="btn btn-danger">edit</a>
+       
+    </section>
+    </form>
+</body>
+</div>
+</html>
+{% include "quizABL1/footer.html" %}

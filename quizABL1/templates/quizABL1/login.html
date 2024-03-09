@@ -1,0 +1,56 @@
+{% load crispy_forms_tags %}
+{% load static %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Register</title>
+    <link rel="stylesheet" href="{% static 'css/form1.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+</head> -->
+{% include "quizABL1/header.html" %}
+<br>
+<br>
+<br>
+<br>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+    <style>
+        section {
+            margin: 20px;
+            padding: 20px;
+            
+            background-color:white;
+            border-radius: 8px;
+            box-shadow: black;
+        }
+    </style>
+</head>
+
+    <div class="container" style="width:500px;">
+<head>
+    <title>Login</title>
+</head>
+
+<body>
+    <section>
+    <h2>Login</h2>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type="submit" class="btn btn-danger">Login</button>
+    </form>
+</section>
+</body>
+<!-- </html> -->
+
+</div>
+
+{% include "quizABL1/footer.html" %}
+
